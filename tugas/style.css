@@ -1,0 +1,126 @@
+/* Styling khusus untuk halaman detail tugas */
+.tugas-detail-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.tugas-detail {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tugas-detail h2 {
+    color: #2E8B57;
+    margin-bottom: 1.5rem;
+}
+
+.tugas-meta {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.tugas-meta p {
+    margin-bottom: 0.5rem;
+}
+
+.tugas-content h3 {
+    color: #4682B4;
+    margin: 1.5rem 0 1rem;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.tugas-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tugas-content li {
+    margin-bottom: 0.5rem;
+}
+blockquote {
+    background: #f9f9f9;
+    border-left: 4px solid #2E8B57;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+.status-selesai {
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+.status-dalam-pengerjaan {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.status-belum-dimulai {
+    color: #FF4500;
+    font-weight: bold;
+}
+
+.tugas-lampiran {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.lampiran-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4682B4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lampiran-btn:hover {
+    background: #3a6d9a;
+}
+
+.lampiran-btn i {
+    font-size: 1.2rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2E8B57;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #26734a;
+}
+
+@media (max-width: 768px) {
+    .tugas-detail {
+        padding: 1.5rem;
+    }
+    
+    .tugas-lampiran {
+        flex-direction: column;
+    }
+    
+    .lampiran-btn {
+        justify-content: center;
+    }
+}

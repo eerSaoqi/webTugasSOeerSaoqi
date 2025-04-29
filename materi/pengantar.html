@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengantar Sistem Operasi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail">
+            <h2>Pengantar Sistem Operasi</h2>
+        
+            <div class="materi-meta">
+                <p><strong>Pertemuan:</strong> 1-2</p>
+                <p><strong>Referensi:</strong> Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts (10th Edition)</p>
+            </div>
+        
+            <img src="../images/Operating-System.jpg" alt="Pengantar Sistem Operasi" class="materi-hero">
+        
+            <div class="materi-content">
+                <h3>Definisi dan Konsep Sistem Operasi</h3>
+                <p>Sistem Operasi (Operating System, OS) adalah kumpulan program yang bekerja sebagai perantara (intermediary) antara pengguna komputer dan perangkat keras komputer. Sistem operasi bertanggung jawab menyediakan lingkungan di mana pengguna dapat menjalankan program dengan nyaman, efisien, dan aman. Sistem operasi tidak hanya bertindak sebagai 'pengatur lalu lintas' bagi semua aktivitas komputer, tetapi juga mengoptimalkan penggunaan sumber daya komputer untuk meningkatkan performa secara keseluruhan.</p>
+        
+                <p>Menurut Silberschatz (2018):</p>
+                <blockquote>
+                    Sistem Operasi adalah program yang mengontrol eksekusi program aplikasi, bertindak sebagai antarmuka antara pengguna dan perangkat keras komputer, serta menyediakan layanan dasar untuk efisiensi dan pengembangan program.
+                </blockquote>
+        
+                <h3>Tujuan Utama Sistem Operasi</h3>
+                <ul>
+                    <li><strong>Efisiensi:</strong> Mengoptimalkan penggunaan sumber daya sistem (CPU, memori, disk, jaringan).</li>
+                    <li><strong>Kenyamanan:</strong> Menyediakan antarmuka yang ramah pengguna, baik dalam bentuk GUI (Graphical User Interface) atau CLI (Command Line Interface).</li>
+                    <li><strong>Evolusi:</strong> Memungkinkan pengembangan program baru dan mendukung inovasi teknologi.</li>
+                    <li><strong>Pengelolaan Sumber Daya:</strong> Mengkoordinasikan dan mengalokasikan sumber daya sesuai kebutuhan proses yang berjalan.</li>
+                </ul>
+        
+                <h3>Fungsi Utama Sistem Operasi</h3>
+                <p>Sistem operasi bertanggung jawab atas berbagai fungsi penting, termasuk:</p>
+                <ul>
+                    <li><strong>Manajemen Proses:</strong> 
+                        <ul>
+                            <li>Membuat dan menghapus proses pengguna serta proses sistem.</li>
+                            <li>Menjadwalkan proses dan menentukan kebijakan alokasi CPU.</li>
+                            <li>Sinkronisasi dan komunikasi antar proses (IPC - Inter Process Communication).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manajemen Memori:</strong> 
+                        <ul>
+                            <li>Menjaga catatan alokasi memori.</li>
+                            <li>Memutuskan proses mana yang akan dimuat ke dalam memori saat eksekusi.</li>
+                            <li>Melakukan swapping dan paging untuk manajemen ruang memori efisien.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manajemen Sistem File:</strong> 
+                        <ul>
+                            <li>Menyediakan mekanisme untuk penyimpanan, pengambilan, dan pembaruan data.</li>
+                            <li>Mengelola struktur direktori dan sistem izin file.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manajemen Perangkat I/O:</strong> 
+                        <ul>
+                            <li>Berinteraksi dengan driver perangkat keras.</li>
+                            <li>Mengatur antrian permintaan perangkat input dan output.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manajemen Keamanan dan Proteksi:</strong> 
+                        <ul>
+                            <li>Memberikan akses terkontrol ke sumber daya komputer.</li>
+                            <li>Melindungi sistem dari pengguna atau program yang tidak sah atau berbahaya.</li>
+                        </ul>
+                    </li>
+                </ul>
+        
+                <h3>Contoh Studi Kasus</h3>
+                <p><strong>Kasus:</strong> Anda membuka browser, mendengarkan musik, dan mengetik di Microsoft Word secara bersamaan.</p>
+                <p><strong>Peran Sistem Operasi:</strong></p>
+                <ul>
+                    <li>Manajemen Proses: Mengatur ketiga aplikasi tersebut berjalan simultan tanpa crash.</li>
+                    <li>Manajemen Memori: Membagi RAM antara browser, pemutar musik, dan Word.</li>
+                    <li>Manajemen File: Membuka dokumen Word yang disimpan di hard drive.</li>
+                    <li>Manajemen I/O: Menyinkronkan aktivitas keyboard, mouse, dan output suara ke speaker.</li>
+                </ul>
+        
+                <h3>Jenis-jenis Sistem Operasi</h3>
+                <ul>
+                    <li><strong>Batch System:</strong> Menjalankan batch tugas tanpa interaksi pengguna (contoh: komputer zaman dahulu).</li>
+                    <li><strong>Time-Sharing System:</strong> Banyak pengguna berbagi waktu CPU secara bersamaan.</li>
+                    <li><strong>Real-Time System:</strong> Memberikan respon cepat terhadap input, digunakan di sistem kendali industri dan medis.</li>
+                    <li><strong>Distributed System:</strong> Mengelola grup komputer terhubung yang bekerja bersama-sama.</li>
+                    <li><strong>Embedded System:</strong> Sistem operasi ringan untuk perangkat seperti microwave, router, kendaraan.</li>
+                </ul>
+        
+                <h3>Contoh Sistem Operasi Modern</h3>
+                <div class="model-proses">
+                    <div class="model-item">
+                        <h4>1. Microsoft Windows</h4>
+                        <img src="../images/jendela.jpg" alt="Windows OS">
+                        <p>Dominan di pasar PC, cocok untuk bisnis dan individu. Kelebihan: user-friendly, kompatibel luas. Kekurangan: rentan terhadap virus.</p>
+                    </div>
+                    <div class="model-item">
+                        <h4>2. Linux</h4>
+                        <img src="../images/linux.png" alt="Linux OS">
+                        <p>Gratis, open-source, sangat fleksibel dan aman. Banyak dipakai di server dan superkomputer. Kekurangan: butuh learning curve tinggi untuk pengguna awam.</p>
+                    </div>
+                    <div class="model-item">
+                        <h4>3. macOS</h4>
+                        <img src="../images/macos.jpeg" alt="macOS">
+                        <p>Sistem operasi eksklusif untuk produk Apple, menawarkan performa tinggi, keamanan, dan ekosistem terintegrasi. Kekurangan: perangkat keras mahal dan pilihan perangkat lunak lebih terbatas dibanding Windows.</p>
+                    </div>
+                    <div class="model-item">
+                        <h4>4. Android</h4>
+                        <img src="../images/android.jpeg" alt="Android">
+                        <p>Sistem operasi mobile berbasis Linux yang paling banyak digunakan di dunia, mendukung berbagai jenis perangkat dengan fleksibilitas tinggi dan ekosistem aplikasi yang luas. Kekurangan: fragmentasi antar perangkat dan tingkat keamanan yang bervariasi tergantung produsen.</p>
+                    </div>
+                    <div class="model-item">
+                        <h4>5. iOS</h4>
+                        <img src="../images/ios.jpg" alt="iOS">
+                        <p>Sistem operasi mobile eksklusif untuk perangkat Apple seperti iPhone dan iPad, menawarkan performa tinggi, keamanan ketat, serta integrasi mendalam dengan ekosistem Apple. Kekurangan: terbatas pada perangkat Apple dan lebih sedikit opsi kustomisasi dibanding Android.</p>
+                    </div>
+                    
+                    
+                </div>
+        
+                <h3>Dokumen Pendukung</h3>
+                <div class="materi-lampiran">
+                    <a href="Pertemuan 1.pdf " target="_blank" class="lampiran-btn">
+                        <i class="fas fa-file-powerpoint"></i> Slide Presentasi</a>
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-pdf"></i> Buku Referensi</a>
+                    <a href="https://www.youtube.com/watch?v=qAycDvYZIKs&list=PLDxrYmtIobtTFrQFwvtsPgb19S6Se0G27" target= "_blalnk" class="lampiran-btn">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran</a>
+                </div>
+            </div>
+        
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </article>
+        
+        
+        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <!-- Untuk animasi chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Untuk drag and drop -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.11/interact.min.js"></script>
+
+    <!-- Untuk efek partikel -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="interactions.js"></script>
+</body>
+
+</html>

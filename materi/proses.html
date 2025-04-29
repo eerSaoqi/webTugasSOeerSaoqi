@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proses dalam Sistem Operasi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail">
+            <h2>Proses dalam Sistem Operasi</h2>
+        
+            <div class="materi-meta">
+                <p><strong>Pertemuan:</strong> 9-10</p>
+                <p><strong>Referensi:</strong> Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts (10th Edition)</p>
+            </div>
+        
+            <img src="../images/process-in-os.png" alt="Ilustrasi Proses dalam Sistem Operasi" class="materi-hero">
+        
+            <div class="materi-content">
+                <h3>Pengertian Proses</h3>
+                <p>Dalam sistem operasi, proses adalah program yang sedang dieksekusi. Proses mencakup program code, aktivitas CPU, data, dan informasi status eksekusi. Sistem operasi bertanggung jawab untuk membuat, menjadwalkan, dan mengelola proses-proses ini.</p>
+        
+                <h3>Elemen-Elemen Proses</h3>
+                <ul>
+                    <li><strong>Program Counter (PC):</strong> Menunjukkan instruksi berikutnya yang akan dieksekusi oleh CPU.</li>
+                    <li><strong>Register:</strong> Menyimpan variabel dan data sementara selama eksekusi.</li>
+                    <li><strong>Stack:</strong> Menyimpan informasi seperti parameter fungsi dan alamat pengembalian.</li>
+                    <li><strong>Data Section:</strong> Menyimpan variabel global dan informasi statis program.</li>
+                    <li><strong>Heap:</strong> Area memori untuk alokasi dinamis selama runtime.</li>
+                </ul>
+        
+                <img src="../images/proses-detail.png" alt="Struktur Proses dalam Memori" style="width: 100%; margin: 1em 0; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+        
+                <h3>State (Keadaan) Proses</h3>
+                <ul>
+                    <li><strong>New:</strong> Proses sedang dibuat.</li>
+                    <li><strong>Ready:</strong> Proses siap untuk dijalankan oleh CPU.</li>
+                    <li><strong>Running:</strong> Proses sedang dieksekusi oleh CPU.</li>
+                    <li><strong>Waiting:</strong> Proses menunggu peristiwa seperti input/output.</li>
+                    <li><strong>Terminated:</strong> Proses telah selesai dieksekusi.</li>
+                </ul>
+        
+                <img src="../images/process-state-diagram.png" alt="Diagram Transisi Status Proses" style="width: 100%; margin: 1em 0; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+        
+                <h3>PCB (Process Control Block)</h3>
+                <p>PCB adalah struktur data yang digunakan oleh sistem operasi untuk menyimpan semua informasi tentang proses, termasuk status, PC, register, prioritas, dan informasi manajemen memori. PCB memungkinkan sistem untuk melanjutkan proses setelah dihentikan sementara (context switching).</p>
+        
+                <h3>Manajemen Proses oleh Sistem Operasi</h3>
+                <ul>
+                    <li><strong>Penciptaan dan Penghentian Proses:</strong> Sistem dapat membuat proses baru (fork) dan mengakhiri proses (exit).</li>
+                    <li><strong>Penjadwalan Proses:</strong> CPU dialokasikan ke proses berdasarkan algoritma penjadwalan seperti FCFS, Round Robin, atau Priority Scheduling.</li>
+                    <li><strong>Sinkronisasi:</strong> Mengatur interaksi antar proses agar tidak terjadi konflik.</li>
+                    <li><strong>Komunikasi Antar-Proses (IPC):</strong> Proses dapat saling bertukar data melalui message passing atau shared memory.</li>
+                </ul>
+        
+                <h3>Contoh Studi Kasus</h3>
+                <p><strong>Kasus:</strong> Suatu sistem menjalankan pemutar musik, aplikasi chat, dan browser secara bersamaan. Bagaimana CPU mengelola proses ini?</p>
+                <p><strong>Jawaban:</strong> Sistem operasi menggunakan penjadwalan waktu (time-sharing) untuk membagi waktu CPU antar proses. Context switching dilakukan untuk berpindah antar proses secara cepat, sehingga pengguna merasa semuanya berjalan bersamaan (multitasking).</p>
+        
+                <h3>Dokumen Pendukung</h3>
+                <div class="materi-lampiran">
+                    <a href="Pertemuan 6.pdf" class="lampiran-btn">
+                        <i class="fas fa-file-powerpoint"></i> Slide Presentasi</a>
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-pdf"></i> Buku Referensi</a>
+                    <a href="https://www.youtube.com/watch?v=jV1vkHv4H9M" target="_blank" class="lampiran-btn">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran</a>
+                </div>
+            </div>
+        
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </article>
+        
+        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+            
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

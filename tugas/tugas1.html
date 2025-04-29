@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Tugas 1 - Analisis Track Lintasan Disk</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 15px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Detail Tugas</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Kembali ke Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tugas-detail-container">
+        <article class="tugas-detail">
+            <h2>Tugas 1: Analisis Track Lintasan Disk</h2>
+
+            <div class="tugas-meta">
+                <p><strong>Deadline:</strong>-</p>
+                <p><strong>Status:</strong> <span class="status-selesai">Selesai</span></p>
+                <p><strong>Dosen Pengampu:</strong> Mr. Dani Rohpandi, M.Kom.</p>
+            </div>
+
+            <div class="tugas-content">
+                <blockquote>
+                    <p><strong>Soal : </strong></p>
+                    Diketahui :
+                    Jumlah track = 2050,
+                    Posisi head berada di track : 1234
+                    Urutan track yang perlu diakses yaitu :
+                    1500, 1100,1750, 1900, [x1], 850, 60, 1300, 1400, 600, [x2], 1500, 1000, 30, 1900, [x3], 700, 1300,
+                    55, 2025, [x4], 700, 1500, 200.
+                    Lakukan perhitungan banyaknya proses lintas track yang dilakukan menggunakan ketujuh algoritma
+                    (mulai dari PTPD hingga Circular Scan), dan gambarkan grafik perjalanan lintasan yang dilakukan
+                    serta tambahkan sedikit narasi sebagai penjelasannya.
+                    <p><strong>Catatan :</strong></p>
+                    [x1] adalah tanggal lahir masing-masing x 10
+                    [x2] adalah bulan lahir masing-masing x 100
+                    [x3] adalah 4 digit tahun lahir masing-masing
+                    [x4] adalah 3 digit terakhir dari NIM
+                    <p><strong>Tanggal lahir :</strong></p> 29 April 2000
+                    <p><strong>NIM terakhir :</strong></p> 198
+                </blockquote>
+                <h3>Analisis Penjadwalan Disk</h3>
+                <p>Pada tugas ini dilakukan simulasi 7 algoritma penjadwalan disk untuk mengakses sejumlah track dengan
+                    posisi awal head di track 1234 dan total track sebanyak 2050. Tujuannya adalah membandingkan
+                    efisiensi lintasan (jumlah track yang dilintasi) dari setiap algoritma.</p>
+
+
+                <h3>Total Lintasan per Algoritma</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Algoritma</th>
+                            <th>Total Lintasan (Track)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FCFS</td>
+                            <td>18125</td>
+                        </tr>
+                        <tr>
+                            <td>SSTF</td>
+                            <td>7563</td>
+                        </tr>
+                        <tr>
+                            <td>SCAN</td>
+                            <td>9707</td>
+                        </tr>
+                        <tr>
+                            <td>LOOK</td>
+                            <td>8759</td>
+                        </tr>
+                        <tr>
+                            <td>C-SCAN</td>
+                            <td>13590</td>
+                        </tr>
+                        <tr>
+                            <td>C-LOOK</td>
+                            <td>11506</td>
+                        </tr>
+                        <tr>
+                            <td>SSPTF</td>
+                            <td>15354</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Grafik dan Penjelasan Setiap Algoritma</h3>
+
+                <h4>1. FCFS (First Come First Serve)</h4>
+                <h3>Detail Lintasan FCFS</h3>
+                <p>Tabel di bawah ini merupakan hasil simulasi algoritma FCFS (First Come First Serve), menunjukkan
+                    urutan track yang diakses dan jarak (seek) dari posisi head ke track tersebut.</p>
+
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Track</th>
+                            <th>Seek Distance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1500</td>
+                            <td>266</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1100</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1750</td>
+                            <td>650</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1900</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>290 --- (tanggal lahir)</td>
+                            <td>1610</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>850</td>
+                            <td>560</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>60</td>
+                            <td>790</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>1300</td>
+                            <td>1240</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>1400</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>600</td>
+                            <td>800</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>400 --- (Bulan)</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>1500</td>
+                            <td>1100</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>1000</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>30</td>
+                            <td>970</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>1900</td>
+                            <td>1870</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>2000 --- (Tahun)</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>700</td>
+                            <td>1300</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>1300</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>55</td>
+                            <td>1245</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>2025</td>
+                            <td>1970</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>198 --- (NIM)</td>
+                            <td>1827</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>700</td>
+                            <td>502</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>1500</td>
+                            <td>800</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>200</td>
+                            <td>1300</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">TOTAL SEEK</th>
+                            <th>20850</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="../images/grafik/grafik_fcfs.png" alt="Grafik FCFS">
+                <p>FCFS mengeksekusi permintaan berdasarkan urutan kedatangan. Karena tidak memperhatikan jarak antar
+                    track, algoritma ini menghasilkan lintasan terpanjang, yaitu 20850 track. Grafik menunjukkan pola
+                    zig-zag tidak beraturan karena pergerakan head yang tidak efisien.</p>
+
+                <h4>2. SSTF (Shortest Seek Time First)</h4>
+                <img src="../images/grafik/grafik_sstf.png" alt="Grafik SSTF">
+                <p>SSTF memilih permintaan yang paling dekat dari posisi head saat ini. Hasilnya sangat efisien dengan
+                    lintasan lebih pendek. Grafik menunjukkan head bergerak ke posisi terdekat berikutnya, meminimalkan
+                    jarak setiap langkah.</p>
+
+                <h4>3. SCAN</h4>
+                <img src="../images/grafik/grafik_scan.png" alt="Grafik SCAN">
+                <p>SCAN menggerakkan head ke satu arah hingga ujung disk, lalu balik ke arah sebaliknya. Total lintasan
+                    lebih stabil. Grafik memperlihatkan pergerakan lurus ke satu arah sebelum berbalik seperti lift.</p>
+
+                <h4>4. LOOK</h4>
+                <img src="../images/grafik/grafik_look.png" alt="Grafik LOOK">
+                <p>LOOK mirip SCAN, tetapi hanya bergerak sejauh track permintaan terakhir. Lebih efisien dibanding
+                    SCAN. Grafik menunjukkan arah pergerakan yang lebih terfokus.</p>
+
+                <h4>5. C-SCAN (Circular SCAN)</h4>
+                <img src="../images/grafik/grafik_c-scan.png" alt="Grafik C-SCAN">
+                <p>C-SCAN bergerak satu arah, setelah mencapai ujung langsung kembali ke bawah tanpa melayani permintaan
+                    saat turun. Grafik menunjukkan lompatan besar dari ujung atas ke bawah.</p>
+
+                <h4>6. C-LOOK</h4>
+                <img src="../images/grafik/grafik_c-look.png" alt="Grafik C-LOOK">
+                <p>C-LOOK seperti C-SCAN, tetapi hanya melayani permintaan yang ada tanpa menyentuh ujung disk. Grafik
+                    lebih padat karena tidak melewati area kosong di ujung disk.</p>
+
+                <h4>7. SSPTF (Static Sorted Path Total First)</h4>
+                <img src="../images/grafik/grafik_ssptf.png" alt="Grafik SSPTF">
+                <p>SSPTF menyortir semua permintaan dari kecil ke besar. Walau teratur, bisa menghasilkan pergerakan
+                    awal yang jauh jika head tidak dekat dengan nilai terkecil. Grafiknya teratur tetapi kurang efisien
+                    di awal.</p>
+
+                <h3>Kesimpulan</h3>
+                <p>Algoritma SSTF dan LOOK terbukti paling efisien dalam konteks ini. FCFS menghasilkan lintasan
+                    terpanjang karena tidak mempertimbangkan jarak antar permintaan. Pemilihan algoritma tergantung pada
+                    prioritas sistem (kecepatan vs keadilan).</p>
+
+            </div>
+
+            <a href="../index.html#tugas-section" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Daftar Tugas
+            </a>
+        </article>
+
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
