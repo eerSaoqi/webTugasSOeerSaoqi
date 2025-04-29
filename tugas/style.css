@@ -43,6 +43,7 @@
 .tugas-content li {
     margin-bottom: 0.5rem;
 }
+
 blockquote {
     background: #f9f9f9;
     border-left: 4px solid #2E8B57;
@@ -69,25 +70,34 @@ blockquote {
 
 .tugas-lampiran {
     display: flex;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    margin: 1.5rem 0;
+    z-index: 999;
+    margin: 1.5rem 0 0;
+
 }
 
 .lampiran-btn {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     background: #4682B4;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.5rem;
+    border-radius: 10px;
     text-decoration: none;
     transition: background 0.3s;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
+
 .lampiran-btn:hover {
-    background: #3a6d9a;
+    background: #2E8B57;
 }
 
 .lampiran-btn i {
@@ -115,11 +125,11 @@ blockquote {
     .tugas-detail {
         padding: 1.5rem;
     }
-    
+
     .tugas-lampiran {
         flex-direction: column;
     }
-    
+
     .lampiran-btn {
         justify-content: center;
     }
