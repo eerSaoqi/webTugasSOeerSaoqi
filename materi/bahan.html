@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengantar RPL - Rekayasa Perangkat Lunak</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Rekayasa Perangkat Lunak</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail infographic">
+            <h2 class="infographic-title">Manajemen Memori</h2>
+            
+            <div class="memory-visualization">
+                <div class="memory-block os">OS</div>
+                <div class="memory-block process">Process A</div>
+                <div class="memory-block free">Free</div>
+                <div class="memory-block process">Process B</div>
+                <div class="memory-swap">
+                    <i class="fas fa-exchange-alt"></i> Swap Space
+                </div>
+            </div>
+            
+            <div class="memory-methods">
+                <div class="method">
+                    <h4><i class="fas fa-puzzle-piece"></i> Paging</h4>
+                    <p>Memori dibagi menjadi blok-blok berukuran tetap</p>
+                </div>
+                <div class="method">
+                    <h4><i class="fas fa-expand"></i> Segmentation</h4>
+                    <p>Memori dibagi sesuai unit logis program</p>
+                </div>
+            </div>
+        </article>
+        <article class="interactive-simulation">
+            <h2 class="neon-title">Manajemen Proses</h2>
+            
+            <div class="simulation-container">
+                <div class="cpu-visual">
+                    <div class="core" data-core="1">Core 1</div>
+                    <div class="core" data-core="2">Core 2</div>
+                </div>
+                
+                <div class="process-queue">
+                    <div class="process" data-pid="1001" draggable="true">Chrome</div>
+                    <div class="process" data-pid="1002" draggable="true">Photoshop</div>
+                    <div class="process" data-pid="1003" draggable="true">Node.js</div>
+                </div>
+                
+                <button class="run-simulation">Jalankan Scheduler</button>
+            </div>
+            
+            <div class="process-stats">
+                <canvas id="processChart"></canvas>
+            </div>
+        </article>
+        <article class="memory-3d">
+            <h2 class="perspective-text">Manajemen <span>Memori</span></h2>
+            
+            <div class="memory-cube">
+                <div class="face front">Stack</div>
+                <div class="face back">Heap</div>
+                <div class="face right">Code</div>
+                <div class="face left">Data</div>
+            </div>
+            
+            <div class="allocation-demo">
+                <div class="slider-container">
+                    <input type="range" id="memorySlider" min="0" max="100">
+                </div>
+                <div class="memory-bars">
+                    <div class="bar os-bar">OS</div>
+                    <div class="bar process-bar">Process</div>
+                    <div class="bar free-bar">Free</div>
+                </div>
+            </div>
+        </article>
+        <article class="file-explorer">
+            <div class="explorer-window">
+                <div class="explorer-toolbar">
+                    <button class="explorer-btn"><i class="fas fa-arrow-left"></i></button>
+                    <div class="address-bar">C:\Users\Student\Documents</div>
+                    <button class="explorer-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="explorer-sidebar">
+                    <div class="tree-item active">This PC</div>
+                    <div class="tree-item">Local Disk (C:)</div>
+                    <div class="tree-item">Network</div>
+                </div>
+                
+                <div class="file-content">
+                    <div class="file-icon" data-type="pdf">Lecture_1.pdf</div>
+                    <div class="file-icon" data-type="dir">Projects</div>
+                    <div class="file-icon" data-type="img">Diagram.png</div>
+                </div>
+            </div>
+            
+            <div class="metadata-panel">
+                <h3>Struktur Berkas NTFS</h3>
+                <ul class="metadata-list">
+                    <li>Master File Table</li>
+                    <li>Cluster Allocation</li>
+                    <li>Security Descriptors</li>
+                </ul>
+            </div>
+        </article>
+        <article class="cyber-security">
+            <div class="cyber-header">
+                <h2 class="glitch" data-text="Cyber Defense">Cyber Defense</h2>
+                <div class="scanning-animation">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+            
+            <div class="threat-matrix">
+                <div class="threat-card" data-severity="high">
+                    <div class="threat-glow"></div>
+                    <h3>Rootkit</h3>
+                    <p>Hidden malware with admin access</p>
+                </div>
+                
+                <div class="threat-card" data-severity="medium">
+                    <div class="threat-glow"></div>
+                    <h3>Phishing</h3>
+                    <p>Social engineering attack</p>
+                </div>
+            </div>
+            
+            <div class="firewall-visual">
+                <div class="packet" data-status="blocked">Malware</div>
+                <div class="packet" data-status="allowed">HTTP</div>
+                <div class="firewall-gate"></div>
+            </div>
+        </article>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+            <p>Nama: [Nama Anda]</p>
+            <p>NIM: [NIM Anda]</p>
+            <p>Program Studi: [Program Studi Anda]</p>
+            
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Rekayasa Perangkat Lunak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="interactions.js"></script>
+</body>
+</html>

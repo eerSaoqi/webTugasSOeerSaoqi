@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualisasi Algoritma Disk</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            /* hijau */
+            --secondary: #f1c40f;
+            /* kuning */
+            --accent: #3498db;
+            /* biru */
+            --background: #f4f9f4;
+            --text-dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #d4ac0d;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4682B4;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #track-info {
+            margin-top: 25px;
+            background: #ecf9ec;
+            padding: 15px;
+            border-left: 6px solid var(--primary);
+            border-radius: 8px;
+        }
+
+        #track-info p {
+            margin: 6px 0;
+        }
+
+        .algorithm {
+            margin-top: 50px;
+        }
+
+        .algorithm h2 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .seek-time {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        canvas {
+            margin-top: 15px;
+            background: #fcfcfc;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Visualisasi Algoritma Penjadwalan Disk</h1>
+
+        <div class="form-group">
+            <label for="birth-date">Tanggal Lahir</label>
+            <input type="number" id="birth-date" min="1" max="31" placeholder="1 - 31">
+        </div>
+        <div class="form-group">
+            <label for="birth-month">Bulan Lahir</label>
+            <input type="number" id="birth-month" min="1" max="12" placeholder="1 - 12">
+        </div>
+        <div class="form-group">
+            <label for="birth-year">Tahun Lahir</label>
+            <input type="number" id="birth-year" min="1900" max="2025" placeholder="YYYY">
+        </div>
+        <div class="form-group">
+            <label for="nim">3 Digit Terakhir NIM</label>
+            <input type="text" id="nim" placeholder="Contoh: 198">
+        </div>
+        <button onclick="generateTracks()">Hitung Track</button>
+
+        <div id="track-info">
+            <p><strong>Urutan Track:</strong> <span id="track-list"></span></p>
+            <p>Posisi Head Awal: <span class="seek-time" id="head-start">1234</span></p>
+        </div>
+
+        <div class="algorithm">
+            <h2>FCFS</h2>
+            <p>Total seek time: <span class="seek-time" id="fcfs-time">0 track</span></p>
+            <canvas id="fcfs-chart" height="200"></canvas>
+        </div>
+
+        <div class="algorithm">
+            <h2>SSTF</h2>
+            <p>Total seek time: <span class="seek-time" id="sstf-time">0 track</span></p>
+            <canvas id="sstf-chart" height="200"></canvas>
+        </div>
+
+        <div class="algorithm">
+            <h2>SCAN</h2>
+            <p>Total seek time: <span class="seek-time" id="scan-time">0 track</span></p>
+            <canvas id="scan-chart" height="200"></canvas>
+        </div>
+
+        <div class="algorithm">
+            <h2>C-SCAN</h2>
+            <p>Total seek time: <span class="seek-time" id="cscan-time">0 track</span></p>
+            <canvas id="cscan-chart" height="200"></canvas>
+        </div>
+    </div>
+    <div class="algorithm">
+        <h2>Perbandingan Algoritma</h2>
+        <table id="comparison-table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background-color: var(--accent); color: white;">
+                    <th style="padding: 10px; border: 1px solid #ccc;">Algoritma</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Urutan Track</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Total Seek Time</th>
+                </tr>
+            </thead>
+            <tbody id="comparison-body" style="text-align: center; background: #fff;"></tbody>
+        </table>
+        <div
+            style="margin-top: 20px; padding: 15px; background: #e8f6f3; border-left: 6px solid var(--primary); border-radius: 8px;">
+            <h3 style="margin-top: 0; color: var(--primary);">Penjelasan Efisiensi</h3>
+            <p>Efisiensi suatu algoritma penjadwalan disk ditentukan oleh <strong>total seek time</strong>—semakin kecil
+                total seek time, semakin cepat kepala disk menyelesaikan semua permintaan.</p>
+            <p>
+                Umumnya:
+            <ul style="padding-left: 20px;">
+                <li><strong>FCFS</strong> sederhana namun sering tidak efisien karena tidak mempertimbangkan posisi head
+                    saat ini.</li>
+                <li><strong>SSTF</strong> sering menghasilkan waktu pencarian lebih singkat karena selalu memilih track
+                    terdekat berikutnya, namun bisa menyebabkan starvation.</li>
+                <li><strong>SCAN</strong> dan <strong>C-SCAN</strong> cocok untuk sistem multitasking karena memberikan
+                    pelayanan yang lebih adil meskipun seek time bisa sedikit lebih besar.</li>
+            </ul>
+            </p>
+            <p><strong>Kesimpulan:</strong> Algoritma dengan total seek time paling rendah pada tabel di atas dapat
+                dianggap paling efisien untuk kumpulan track yang dihasilkan.</p>
+        </div>
+
+    </div>
+    </div >
+    <a href="../index.html#tugas-section" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Kembali ke Daftar Tugas
+    </a>
+    <div>
+
+
+        <script>
+            const headStart = 1234;
+
+            function calculateSeekTime(sequence) {
+                let total = 0;
+                for (let i = 1; i < sequence.length; i++) {
+                    total += Math.abs(sequence[i] - sequence[i - 1]);
+                }
+                return total;
+            }
+
+            function fcfs(tracks) {
+                return [headStart, ...tracks];
+            }
+
+            function sstf(tracks) {
+                let sequence = [headStart];
+                let pending = [...tracks];
+                let current = headStart;
+
+                while (pending.length > 0) {
+                    let closestIndex = 0;
+                    let minDistance = Math.abs(pending[0] - current);
+
+                    for (let i = 1; i < pending.length; i++) {
+                        let distance = Math.abs(pending[i] - current);
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            closestIndex = i;
+                        }
+                    }
+
+                    current = pending.splice(closestIndex, 1)[0];
+                    sequence.push(current);
+                }
+
+                return sequence;
+            }
+
+            function scan(tracks) {
+                let sequence = [headStart];
+                let sorted = [...tracks].sort((a, b) => a - b);
+                let left = sorted.filter(t => t < headStart).reverse();
+                let right = sorted.filter(t => t >= headStart);
+                return sequence.concat(right, left);
+            }
+
+            function cscan(tracks) {
+                let sequence = [headStart];
+                let sorted = [...tracks].sort((a, b) => a - b);
+                let right = sorted.filter(t => t >= headStart);
+                let left = sorted.filter(t => t < headStart);
+                return sequence.concat(right, [0], left);
+            }
+
+            function drawChart(id, data) {
+                const ctx = document.getElementById(id).getContext("2d");
+                return new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: data.map((_, i) => i),
+                        datasets: [{
+                            label: "Track",
+                            data: data,
+                            borderColor: getColorByChartId(id),
+                            fill: false,
+                            tension: 0.2,
+                            pointRadius: 4,
+                            pointBackgroundColor: "#fff",
+                            pointBorderColor: getColorByChartId(id),
+                            pointHoverRadius: 6
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: "Track"
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: "Langkah"
+                                }
+                            }
+                        },
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            function getColorByChartId(id) {
+                switch (id) {
+                    case "fcfs-chart": return "#27ae60";
+                    case "sstf-chart": return "#f39c12";
+                    case "scan-chart": return "#2980b9";
+                    case "cscan-chart": return "#8e44ad";
+                    default: return "#000";
+                }
+            }
+
+            let charts = {};
+
+            function updateChart(id, data) {
+                if (charts[id]) {
+                    charts[id].data.labels = data.map((_, i) => i);
+                    charts[id].data.datasets[0].data = data;
+                    charts[id].update();
+                } else {
+                    charts[id] = drawChart(id, data);
+                }
+            }
+
+            function generateTracks() {
+                const date = parseInt(document.getElementById("birth-date").value);
+                const month = parseInt(document.getElementById("birth-month").value);
+                const year = parseInt(document.getElementById("birth-year").value);
+                const nim = parseInt(document.getElementById("nim").value);
+
+                if (isNaN(date) || isNaN(month) || isNaN(year) || isNaN(nim)) {
+                    alert("Harap isi semua field dengan benar!");
+                    return;
+                }
+
+                const x1 = date * 10;
+                const x2 = month * 100;
+                const x3 = year;
+                const x4 = nim;
+
+                const tracks = [
+                    1500, 1100, 1750, 1900, x1, 850, 60, 1300, 1400, 600, x2,
+                    1500, 1000, 30, 1900, x3, 700, 1300, 55, 2025, x4, 700, 1500, 200
+                ];
+
+                document.getElementById("track-list").textContent = tracks.join(", ");
+
+                const fcfsSeq = fcfs(tracks);
+                const sstfSeq = sstf(tracks);
+                const scanSeq = scan(tracks);
+                const cscanSeq = cscan(tracks);
+
+                updateChart("fcfs-chart", fcfsSeq);
+                updateChart("sstf-chart", sstfSeq);
+                updateChart("scan-chart", scanSeq);
+                updateChart("cscan-chart", cscanSeq);
+
+                document.getElementById("fcfs-time").textContent = `${calculateSeekTime(fcfsSeq)} track`;
+                document.getElementById("sstf-time").textContent = `${calculateSeekTime(sstfSeq)} track`;
+                document.getElementById("scan-time").textContent = `${calculateSeekTime(scanSeq)} track`;
+                document.getElementById("cscan-time").textContent = `${calculateSeekTime(cscanSeq)} track`;
+
+                const algorithms = [
+                    { name: "FCFS", seq: fcfsSeq, time: calculateSeekTime(fcfsSeq) },
+                    { name: "SSTF", seq: sstfSeq, time: calculateSeekTime(sstfSeq) },
+                    { name: "SCAN", seq: scanSeq, time: calculateSeekTime(scanSeq) },
+                    { name: "C-SCAN", seq: cscanSeq, time: calculateSeekTime(cscanSeq) }
+                ];
+
+                const tbody = document.getElementById("comparison-body");
+                tbody.innerHTML = ""; // clear previous rows
+
+                algorithms.forEach(alg => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+          <td style="padding: 10px; border: 1px solid #ccc;">${alg.name}</td>
+          <td style="padding: 10px; border: 1px solid #ccc; text-align: left;">${alg.seq.join(" → ")}</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">${alg.time} track</td>
+        `;
+                    tbody.appendChild(row);
+                });
+
+            }
+        </script>
+</body>
+
+</html>

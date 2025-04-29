@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Sistem File dalam Sistem Operasi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail">
+            <h2>Manajemen Sistem File dalam Sistem Operasi</h2>
+        
+            <div class="materi-meta">
+                <p><strong>Pertemuan:</strong> 7-8</p>
+                <p><strong>Referensi:</strong> Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts</p>
+            </div>
+        
+            <img src="../images/manajemenSistemFile.png" alt="Manajemen File" class="materi-hero">
+        
+            <div class="materi-content">
+                <h3>Konsep Dasar Sistem File</h3>
+                <p>Sistem file adalah metode untuk menyimpan dan mengatur data di media penyimpanan seperti hard disk, SSD, atau flash drive. Sistem operasi menyediakan abstraksi berupa file untuk memudahkan pengguna mengelola data.</p>
+        
+                <h3>Tujuan Sistem File</h3>
+                <ul>
+                    <li><strong>Penyimpanan Permanen:</strong> Data tetap ada setelah komputer dimatikan.</li>
+                    <li><strong>Organisasi Data:</strong> Menyediakan struktur hierarki (folder) untuk mengatur file.</li>
+                    <li><strong>Keamanan Data:</strong> Melindungi file dari akses tidak sah.</li>
+                    <li><strong>Efisiensi Akses:</strong> Mengoptimalkan waktu baca/tulis file.</li>
+                </ul>
+        
+                <h3>Struktur Sistem File</h3>
+                <ul>
+                    <li><strong>File:</strong> Unit dasar penyimpanan data.</li>
+                    <li><strong>Direktori:</strong> Struktur untuk mengorganisasi file.</li>
+                    <li><strong>Metadata:</strong> Informasi tentang file (ukuran, tipe, tanggal dibuat).</li>
+                    <li><strong>Inode:</strong> Struktur data yang menyimpan metadata file (khusus di UNIX/Linux).</li>
+                </ul>
+        
+                <h3>Metode Alokasi File</h3>
+                <ul>
+                    <li><strong>Contiguous Allocation:</strong> File disimpan dalam blok-blok berurutan.</li>
+                    <li><strong>Linked Allocation:</strong> Setiap blok file menunjuk ke blok berikutnya.</li>
+                    <li><strong>Indexed Allocation:</strong> Menggunakan tabel indeks untuk menunjuk ke semua blok file.</li>
+                </ul>
+        
+                <h3>Contoh Sistem File Populer</h3>
+                <ul>
+                    <li><strong>FAT32:</strong> Umum di USB flash drive.</li>
+                    <li><strong>NTFS:</strong> Digunakan di Windows untuk fitur keamanan dan recovery.</li>
+                    <li><strong>ext4:</strong> Umum di sistem operasi Linux modern.</li>
+                </ul>
+        
+                <blockquote>
+                    <h3>Contoh Studi Kasus 1</h3>
+                    <p><strong>Kasus:</strong> Bagaimana cara mengelola file di sistem operasi Linux?</p>
+                    <p><strong>Jawaban:</strong> Menggunakan perintah terminal seperti 'ls' untuk melihat isi direktori, 'cp' untuk menyalin file, dan 'rm' untuk menghapus file.</p>
+                    <h3>Contoh Studi Kasus 2</h3>
+                    <p><strong>Kasus:</strong> Mengapa perlu melakukan "defragmentasi" hard disk pada Windows?</p>
+                    <p><strong>Jawaban:</strong> Karena file bisa terfragmentasi (tersimpan di lokasi terpisah-pisah), sehingga defragmentasi menyusun kembali blok file agar lebih berurutan dan meningkatkan kecepatan akses.</p>
+                </blockquote>
+                <h3>Dokumen Pendukung</h3>
+                <div class="materi-lampiran">
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-powerpoint"></i> Slide Presentasi</a>
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-pdf"></i> Buku Referensi</a>
+                    <a href="https://www.youtube.com/watch?v=qAycDvYZIKs&list=PLDxrYmtIobtTFrQFwvtsPgb19S6Se0G27" target="_blank" class="lampiran-btn">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran</a>
+                </div>
+            </div>
+        
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </article>
+        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+            
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

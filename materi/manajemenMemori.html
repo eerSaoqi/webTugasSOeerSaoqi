@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Memori dalam Sistem Operasi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail">
+            <h2>Manajemen Memori dalam Sistem Operasi</h2>
+
+            <div class="materi-meta">
+                <p><strong>Pertemuan:</strong> 5-6</p>
+                <p><strong>Referensi:</strong> Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System
+                    Concepts</p>
+            </div>
+
+            <img src="../images/manajemenMemori.jpg" alt="Manajemen Memori" class="materi-hero">
+
+            <div class="materi-content">
+                <h3>Konsep Dasar Manajemen Memori</h3>
+                <p>Manajemen memori adalah proses mengelola memori utama (RAM) komputer sehingga berbagai program dapat
+                    berjalan secara bersamaan dengan efisien tanpa konflik. Sistem operasi bertanggung jawab atas
+                    alokasi, de-alokasi, dan proteksi memori selama proses eksekusi.</p>
+
+                <h3>Tujuan Manajemen Memori</h3>
+                <ul>
+                    <li><strong>Multiprogramming:</strong> Memastikan beberapa proses dapat berbagi memori secara
+                        efisien.</li>
+                    <li><strong>Isolasi:</strong> Mencegah proses mengakses memori proses lain tanpa izin.</li>
+                    <li><strong>Proteksi:</strong> Menghindari kerusakan data karena kesalahan program.</li>
+                    <li><strong>Penggunaan Memori Optimal:</strong> Mengurangi fragmentasi dan meningkatkan utilisasi
+                        memori.</li>
+                </ul>
+
+                <h3>Teknik Manajemen Memori</h3>
+                <ul>
+                    <li><strong>Partisi Statis:</strong> Memori dibagi menjadi blok-blok dengan ukuran tetap saat
+                        booting.</li>
+                    <li><strong>Partisi Dinamis:</strong> Ukuran partisi dibuat berdasarkan kebutuhan program saat
+                        runtime.</li>
+                    <li><strong>Paging:</strong> Memori dibagi menjadi halaman berukuran tetap, untuk menghindari
+                        fragmentasi eksternal.</li>
+                    <li><strong>Segmentation:</strong> Memori dibagi berdasarkan struktur logis program (fungsi, array,
+                        dll).</li>
+                </ul>
+
+                <h3>Swapping dan Virtual Memory</h3>
+                <p><strong>Swapping:</strong> Teknik memindahkan seluruh proses ke disk sementara untuk membebaskan
+                    memori utama.</p>
+                <p><strong>Virtual Memory:</strong> Mekanisme di mana program dapat menggunakan lebih banyak memori
+                    daripada yang tersedia fisik dengan menggunakan disk sebagai perluasan RAM.</p>
+                <blockquote>
+                    <h3>Contoh Studi Kasus</h3>
+                    <p><strong>Kasus:</strong> Mengapa membuka banyak aplikasi berat (seperti Photoshop dan After
+                        Effects) bisa membuat komputer menjadi lambat?</p>
+                    <p><strong>Jawaban:</strong> Karena sistem kehabisan RAM fisik dan mulai menggunakan disk (virtual
+                        memory) yang jauh lebih lambat, sehingga waktu akses meningkat drastis.</p>
+                </blockquote>
+                <h3>Dokumen Pendukung</h3>
+                <div class="materi-lampiran">
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-powerpoint"></i> Slide Presentasi</a>
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-pdf"></i> Buku Referensi</a>
+                    <a href="https://www.youtube.com/watch?v=qAycDvYZIKs&list=PLDxrYmtIobtTFrQFwvtsPgb19S6Se0G27" target="_blank" class="lampiran-btn">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran</a>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </article>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

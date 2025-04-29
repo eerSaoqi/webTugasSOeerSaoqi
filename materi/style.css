@@ -1,0 +1,192 @@
+/* Styling khusus untuk halaman detail materi */
+.materi-detail-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.materi-detail {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.materi-detail h2 {
+    color: #2E8B57;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.materi-meta {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.materi-meta p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.materi-hero {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.materi-content h3 {
+    color: #4682B4;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.materi-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 4px solid #2E8B57;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+.model-proses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.model-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.model-item h4 {
+    color: #2E8B57;
+    margin-bottom: 1rem;
+}
+
+.model-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.materi-lampiran {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.lampiran-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4682B4;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lampiran-btn:hover {
+    background: #3a6d9a;
+}
+
+.lampiran-btn i {
+    font-size: 1.2rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2E8B57;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #26734a;
+}
+
+/* Efek Parallax */
+.materi-parallax {
+    perspective: 1000px;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Animasi CPU Core */
+@keyframes core-pulse {
+    0% { box-shadow: 0 0 5px #00ffaa; }
+    100% { box-shadow: 0 0 20px #00ffaa; }
+}
+
+/* Efek Glitch Text */
+.glitch {
+    position: relative;
+    animation: glitch-effect 2s infinite;
+}
+
+/* Kubus 3D Memori */
+.memory-cube {
+    transform-style: preserve-3d;
+    animation: rotate-cube 20s infinite linear;
+}
+
+/* Scan Line Keamanan */
+.scanning-animation {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,255,170,0) 0%,
+        rgba(0,255,170,0.8) 50%,
+        rgba(0,255,170,0) 100%
+    );
+    animation: scan 3s linear infinite;
+}
+
+/* Efek Kartu Threat */
+.threat-card:hover .threat-glow {
+    animation: pulse-glow 0.5s infinite alternate;
+}
+
+@media (max-width: 768px) {
+    .materi-detail {
+        padding: 1.5rem;
+    }
+    
+    .model-proses {
+        grid-template-columns: 1fr;
+    }
+    
+    .materi-lampiran {
+        flex-direction: column;
+    }
+    
+    .lampiran-btn {
+        justify-content: center;
+    }
+}

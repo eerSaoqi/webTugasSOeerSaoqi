@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Proses dalam Sistem Operasi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Materi Pembelajaran</h1>
+            <p>Sistem Operasi</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html#tugas-section">Daftar Tugas</a></li>
+                <li><a href="../index.html#footer">Tentang Saya</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="materi-detail-container">
+        <article class="materi-detail">
+            <h2>Manajemen Proses dalam Sistem Operasi</h2>
+        
+            <div class="materi-meta">
+                <p><strong>Pertemuan:</strong> 3-4</p>
+                <p><strong>Referensi:</strong> Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts</p>
+            </div>
+        
+            <img src="../images/manajemenProses.jpeg" alt="Manajemen Proses" class="materi-hero">
+        
+            <div class="materi-content">
+                <h3>Definisi Proses</h3>
+                <p>Proses adalah program yang sedang dieksekusi, termasuk semua konteks yang diperlukan untuk menjalankan program tersebut seperti counter program, register, dan variabel. Tanpa sistem operasi, komputer hanya akan mengeksekusi satu instruksi per satu waktu, sehingga manajemen proses dibutuhkan untuk memungkinkan multitasking dan penggunaan sumber daya secara efektif.</p>
+        
+                <h3>Komponen Proses</h3>
+                <ul>
+                    <li><strong>Program Code:</strong> Kode program itu sendiri (instruksi-instruksi yang harus dijalankan).</li>
+                    <li><strong>Program Counter:</strong> Lokasi instruksi berikutnya yang akan dijalankan.</li>
+                    <li><strong>Stack:</strong> Menyimpan informasi fungsi seperti parameter dan variabel lokal.</li>
+                    <li><strong>Data Section:</strong> Menyimpan data global dan variabel dinamis.</li>
+                    <li><strong>Heap:</strong> Bagian untuk alokasi memori dinamis selama runtime.</li>
+                </ul>
+        
+                <h3>Siklus Hidup Proses</h3>
+                <ul>
+                    <li><strong>New:</strong> Proses baru dibuat.</li>
+                    <li><strong>Ready:</strong> Proses siap untuk dijalankan oleh CPU.</li>
+                    <li><strong>Running:</strong> Proses sedang dieksekusi.</li>
+                    <li><strong>Waiting:</strong> Proses menunggu event atau sumber daya.</li>
+                    <li><strong>Terminated:</strong> Proses selesai atau dihentikan.</li>
+                </ul>
+        
+                <h3>Penjadwalan Proses</h3>
+                <p>Penjadwalan proses menentukan proses mana yang akan dijalankan terlebih dahulu. Sistem operasi menggunakan algoritma berikut:</p>
+                <ul>
+                    <li><strong>FCFS (First Come, First Served):</strong> Proses yang datang lebih dahulu dilayani lebih dahulu.</li>
+                    <li><strong>SJF (Shortest Job First):</strong> Proses dengan waktu eksekusi terpendek diprioritaskan.</li>
+                    <li><strong>Priority Scheduling:</strong> Proses dengan prioritas tertinggi dijalankan dulu.</li>
+                    <li><strong>Round Robin:</strong> Setiap proses mendapat jatah waktu CPU secara bergilir.</li>
+                </ul>
+        
+                <blockquote>
+                    <h3>Contoh Studi Kasus</h3>
+                    <p><strong>Kasus:</strong> Pada saat membuka 5 tab browser dan menjalankan pemutar musik, bagaimana CPU memilih tab yang akan diproses?</p>
+                    <p><strong>Jawaban:</strong> Sistem operasi menggunakan penjadwalan preemptive (Round Robin) untuk membagi waktu CPU dengan adil antara semua tab browser dan pemutar musik agar semua tetap responsif.</p>
+                </blockquote>
+        
+                <h3>Dokumen Pendukung</h3>
+                <div class="materi-lampiran">
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-powerpoint"></i> Slide Presentasi</a>
+                    <a href="#" class="lampiran-btn">
+                        <i class="fas fa-file-pdf"></i> Buku Referensi</a>
+                    <a href="https://www.youtube.com/watch?v=qAycDvYZIKs&list=PLDxrYmtIobtTFrQFwvtsPgb19S6Se0G27" target="_blank" class="lampiran-btn">
+                        <i class="fas fa-file-video"></i> Video Pembelajaran</a>
+                </div>
+            </div>
+        
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </article>
+        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h2>Tentang Saya</h2>
+            
+            <div class="social-media">
+                <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/anda" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/anda" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 eerSaoqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
