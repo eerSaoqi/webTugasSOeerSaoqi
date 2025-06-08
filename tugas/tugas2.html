@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Tugas 1 - Analisis Kebutuhan</title>
+    <title>Detail Tugas 2 - Penjadwalan Proses</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <h1>Detail Tugas</h1>
-            <p>Rekayasa Perangkat Lunak</p>
+            <p>Sistem Operasi</p>
         </div>
         <nav id="navbar">
             <ul class="nav-links">
@@ -29,42 +31,906 @@
 
     <main class="tugas-detail-container">
         <article class="tugas-detail">
-            <h2>Tugas 1: Analisis Kebutuhan</h2>
-            
+            <h2><strong>Tugas 2 : Penjadwalan Proses </strong></h2>
+
             <div class="tugas-meta">
-                <p><strong>Deadline:</strong> 10 Oktober 2023</p>
+                <p><strong>Deadline:</strong> 18 Juni 2025</p>
                 <p><strong>Status:</strong> <span class="status-selesai">Selesai</span></p>
                 <p><strong>Dosen Pengampu:</strong> Mr. Dani Rohpandi, M.Kom.</p>
             </div>
-            
+
             <div class="tugas-content">
                 <h3>Deskripsi Tugas</h3>
-                <p>Buat dokumen analisis kebutuhan untuk sistem informasi akademik kampus. Dokumen harus mencakup:</p>
+                <p> Kerjakan seluruh proses perhitungan berikut gambar yang dibutuhkan untuk :
+                </p>
                 <ul>
-                    <li>Daftar stakeholder</li>
-                    <li>Kebutuhan fungsional</li>
-                    <li>Kebutuhan non-fungsional</li>
-                    <li>Use case diagram</li>
-                    <li>Dokumen SRS (Software Requirements Specification)</li>
+                    <li>Penjadwalan Tugas Prioritas Dinamis (PTPD)</li>
+                    <li>Penjadwalan Tugas Deterministik (PTD) / Shortest Job First (SJF) </li>
+                    <li>Penjadwalan Proses Terpendek Dipertamakan Prempsi(PTDP)</li>
+                    <li>Round Robin Penjadwalan Tugas Deterministik (RPTD)</li>
+                    <li>Round Robin Quantum = 2</li>
+                    <li>Round Robin Quantum = 3</li>
+                    <li>Round Robin Quantum = 4</li>
+                    <li>Round Robin Quantum = 5</li>
                 </ul>
-                
-                <h3>Instruksi Khusus</h3>
-                <p>Gunakan template SRS IEEE 830 dan sertakan minimal 10 kebutuhan fungsional dan 5 kebutuhan non-fungsional. Use case diagram harus mencakup minimal 5 use case utama.</p>
-                
-                <h3>Catatan Tambahan</h3>
-                <p>Tugas sudah dikumpulkan melalui LMS pada 8 Oktober 2023 dengan nama file: RPL_Tugas1_[NIM Anda].pdf</p>
-                
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong>X1 = 8</strong></td> <!-- 7x1 = 7 -->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong>X2 = 7 </strong></td> <!-- 15x2 = 30 -->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <h4>Keterangan</h4>
+                <p>Nama : Moh Irfan Syauqi</p>
+                <p>NIM : 23030101<span style="color: #4682B4;"><strong>98</strong></span></p>
+                <li>X1 : Merupakan hasil tambah dari dua digit terakhir NIM, 98 -> 17 -> 8</li>
+                <li>X2 : Merupakan hasil dari X1 dikali 2 , 8x2 -> 16 -> 7 </li>
+                <li> TB : Tiba </li>
+                <li> LP : Lama Proses </li>
+                <li> SM : Saat Mulai </li>
+                <li> SR : Saat Rampung </li>
+                <li> LT : Lama Tanggap </li>
+
+                <h3>Hasil Dan Pembahasan</h3>
+                <h4>1. Penjadwalan Tugas Prioritas Dinamis (PTPD)</h4>
+                <p>Penjadwalan tanpa prioritas tanpa prempsi, Proses
+                    yang tiba lebih dahulu akan dilayani lebih dahulu, jika
+                    tiba pada waktu yang bersamaan akan dilayani sesuai
+                    dengan urutan pada antrian.
+                </p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>12</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>19</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong>8</strong></td> <!-- 7x1 = 7 -->
+                            <td>19</td>
+                            <td>27</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>27</td>
+                            <td>37</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong>7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>37</td>
+                            <td>44</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>44</td>
+                            <td>48</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>148,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>21,1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>2. Penjadwalan Tugas Deterministik (PTD) / Shortest Job First (SJF) </h4>
+                <p>Penjadwalan dengan prioritas tanpa prempsi,
+                    Terdapat 2 langkah :
+                    Penentuan berdasarkan pendeknya proses yang dilayani
+                    Jika proses yang terpendek tersebut belum tiba maka
+                    prosesor akan melayani proses yang telah tiba sampai
+                    proses tersebut selesai.
+                </p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>12</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>19</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong>8</strong></td> <!-- 7x1 = 7 -->
+                            <td>19</td>
+                            <td>27</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>38</td>
+                            <td>48</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong>7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>31</td>
+                            <td>38</td>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>27</td>
+                            <td>31</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>136,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>19,4</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>3. Penjadwalan Proses Terpendek Dipertamakan Prempsi (PTDP)</h4>
+                <p>Penjadwalan dengan prioritas dengan prempsi
+                Beberapa ketentuan :</p>
+                <li>Prioritas berdasarkan pendeknya sisa proses</li>
+                <li>Diperhatikan saat proses tiba atau saat proses selesai</li>
+                <li>Menghitung lama sisa proses dari semua proses yang ada</li>
+                <li>Jika proses dengan sisa proses yang lebih pendek dari
+                    proses yang sedang dikerjakan, maka atas dasar
+                    prempsi proses yang sedang dikerjakan akan dikeluarkan
+                    dari prosesor</li>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>19</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong> 8</strong></td> <!-- 7x1 = 7 -->
+                            <td>19</td>
+                            <td>27</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>27</td>
+                            <td>37</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong> 7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>37</td>
+                            <td>44</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>44</td>
+                            <td>48</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>144,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>20,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>4. Penjadwalan Ratio Pinalti Tertinggi Dipertamakan (RPTD)</h4>
+                <p>Tetap mendahulukan proses terpendek, namun prioritas
+                    proses panjang akan turut meningkat melalui peningkatan
+                    ratio pinaltinya.</p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>12</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>19</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong> 8</strong></td> <!-- 7x1 = 7 -->
+                            <td>19</td>
+                            <td>27</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>38</td>
+                            <td>48</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong> 7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>31</td>
+                            <td>38</td>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>27</td>
+                            <td>31</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>136,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>19,4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Tabel Rasio Pinalty</h4>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TS</th>
+                            <th>RP</th>
+                            <th>TS</th>
+                            <th>RP</th>
+                            <th>TS</th>
+                            <th>RP</th>
+                            <th>TS</th>
+                            <th>RP</th>
+                            <th>TS</th>
+                            <th>RP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>7</td>
+                            <td><span style="color: #4682B4;"><strong>3,3333</strong></span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>4</td>
+                            <td>1,5714</td>
+                            <td>7</td>
+                            <td><span style="color: #4682B4;"><strong>2</strong></span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>2</td>
+                            <td>1,25</td>
+                            <td>5</td>
+                            <td>1,625</td>
+                            <td>12</td>
+                            <td><span style="color: #4682B4;"><strong>2,5</strong></span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>-2</td>
+                            <td>0,8</td>
+                            <td>1</td>
+                            <td>1,1</td>
+                            <td>8</td>
+                            <td>1,8</td>
+                            <td>16</td>
+                            <td>2,6</td>
+                            <td>20</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>-6</td>
+                            <td>0,1429</td>
+                            <td>-3</td>
+                            <td>0,5714</td>
+                            <td>4</td>
+                            <td>1,5714</td>
+                            <td>12</td>
+                            <td>2,7143</td>
+                            <td>16</td>
+                            <td><span style="color: #4682B4;"><strong>3,2857</strong></span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>-9</td>
+                            <td>-1,25</td>
+                            <td>-6</td>
+                            <td>-0,5</td>
+                            <td>1</td>
+                            <td>1,25</td>
+                            <td>9</td>
+                            <td><span style="color: #4682B4;"><strong>3,25</strong></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Keterangan :</h4>
+                <p>Penjadwalan Berurutan Sesuai Rasio Pinalty Terbesar</p>
+                <li>TS = Saat Rampung - Saat Tiba</li>
+                <li>RP = TS - Lama Proses</li>
+                <li>TS : Waktu Sia-Sia</li>
+                <li>RP : Rasio Pinalty</li>
+
+                <p>Tugas sudah dikumpulkan melalui LMS pada 8 Oktober 2023 dengan nama file: RPL_Tugas1_[NIM Anda].pdf
+                </p>
+                <h4>5. Round Robin Quantum = 2</h4>
+                <p>Penjadwalan tanpa prioritas dengan prempsi
+                    Beberapa ketentuan :
+                    <li>Kuantum waktu , waktu yang digunakan oleh prosesor
+                    untuk melayani setiap proses</li>
+                    <li>Prosesor akan melayani setiap proses berdasarkan
+                    antrian</li>
+                    <li>Prosesor akan melayani sesuai dengan Kuantum waktu
+                    yang sudah ditentukan.</li>
+                </p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>21</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>27</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong> 8</strong></td> <!-- 7x1 = 7 -->
+                            <td>12</td>
+                            <td>31</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>24</td>
+                            <td>47</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong> 7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>32</td>
+                            <td>48</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>38</td>
+                            <td>46</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>179,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>25,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Tugas sudah dikumpulkan melalui LMS pada 8 Oktober 2023 dengan nama file: RPL_Tugas1_[NIM Anda].pdf
+                </p>
+                <h4>6. Round Robin Quantum = 3</h4>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>18</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>6</td>
+                            <td>28</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong> 8</strong></td> <!-- 7x1 = 7 -->
+                            <td>9</td>
+                            <td>30</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>24</td>
+                            <td>47</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong> </strong></td> <!-- 15x2 = 30 -->
+                            <td>33</td>
+                            <td>48</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>36</td>
+                            <td>46</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>175,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>25,0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>7. Round Robin Quantum = 4</h4>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>21</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>23</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong>8</strong></td> <!-- 7x1 = 7 -->
+                            <td>16</td>
+                            <td>31</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>24</td>
+                            <td>48</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong>7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>32</td>
+                            <td>47</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>36</td>
+                            <td>40</td>
+                            <td>36</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>169,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>24,1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>8. Round Robin Quantum = 5</h4>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>TB</th>
+                            <th>LP</th>
+                            <th>SM</th>
+                            <th>SR</th>
+                            <th>LT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>14</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B</strong></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>29</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td><strong>D</strong></td>
+                            <td>7</td>
+                            <td><strong> 8</strong></td> <!-- 7x1 = 7 -->
+                            <td>15</td>
+                            <td>33</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>47</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F</strong></td>
+                            <td>15</td>
+                            <td><strong> 7 </strong></td> <!-- 15x2 = 30 -->
+                            <td>29</td>
+                            <td>48</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>40</td>
+                            <td>44</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td>175,0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>RERATA</strong></td>
+                            <td>25,0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <h3>Lampiran</h3>
                 <div class="tugas-lampiran">
-                    <a href="#" class="lampiran-btn">
-                        <i class="fas fa-file-pdf"></i> Download PDF Instruksi
-                    </a>
-                    <a href="#" class="lampiran-btn">
-                        <i class="fas fa-file-word"></i> Template SRS
+                    <a href="https://docs.google.com/spreadsheets/d/11D3SJw93AN9Ny8COOI9hJncI238vb1ZR/edit?usp=sharing&ouid=116295232850194253872&rtpof=true&sd=true" class="lampiran-btn" target="_blank">
+                        <i class="fas fa-file-excel"></i> Lihat File Excel
                     </a>
                 </div>
             </div>
-            
+
             <a href="../index.html#tugas-section" class="back-btn">
                 <i class="fas fa-arrow-left"></i> Kembali ke Daftar Tugas
             </a>
@@ -74,7 +940,7 @@
     <footer id="footer">
         <div class="footer-content">
             <h2>Tentang Saya</h2>
-            
+
             <div class="social-media">
                 <a href="https://facebook.com/anda" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://twitter.com/anda" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -89,4 +955,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>
